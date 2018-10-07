@@ -1,8 +1,21 @@
+# vishd - vish with documentation
+# Create an executable shell file with one command
+# instead of three. Files which are not marked as
+# executables must instead be sourced or changed
+# to executable permission manually as specified below.
+# This script also automatically reminds you to start
+# writing the script by starting an editor.
+# TBD: allow a choice of editors in a .vishdrc file
+# or on the command line.
+# also TBD: Allow for a choice of file extensions (limits
+# errors in filename creation - options may include .sh,
+# .bash, etc.)
+
 #!/bin/bash
 
 if [ $# -eq 0 ]
   then
-    echo "No arguments supplied"
+    echo "Please enter filename"
 else
         touch $1
         chmod a+x $1
